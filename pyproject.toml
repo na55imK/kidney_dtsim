@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kidney_dtsim"
+version = "0.1.0"
+description = "A discrete time simulation model for kidney allocation in Germany"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mesa~=2.2.4",
+    "pandas~=2.1.4",
+    "numpy~=1.26.3",
+    "scipy~=1.11.4",
+    "lifelines~=0.28.0",
+    "matplotlib~=3.8.0",
+    "seaborn~=0.13.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
